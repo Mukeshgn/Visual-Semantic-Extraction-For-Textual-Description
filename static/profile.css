@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #283747;
+    font-family: "Comfortaa", sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+ul{
+    width: 300px;
+    display: flex;
+    justify-content: space-between
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#main{
+    margin: 100px auto;
+    margin-bottom: 40px;
+    width: fit-content;
+}
+h1{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+form{
+    background-color: #EAEDED;
+    padding: 10px;
+    padding-bottom: 35px;
+    margin-top:10px;
+    border-radius: 10px;
+}
+
+#choose-inner{
+    display: flex;
+    align-items: center;
+}
+
+#choose-outer{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.file-upload-input {
+    display: none;
+}
+
+.file-input-container {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Style the label */
+.file-upload-label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.file-input-container:hover {
+    background-color: #e0e0e0;
+}
+
+#upload{
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    font-size: 14px;
+}
+
+#upload:hover{
+    background-color: #e0e0e0;
+}
+
+#para p{
+    margin: 20px 0;
+}
+
+#show-img{
+    margin-bottom: 50px;
+}
+
+#image-preview-container {
+    margin-top: 20px;
+    display: none; /* Initially hide the image preview container */
+}
+
+/* Style the image preview */
+#image-preview {
+    max-width: 100%; /* Adjust as needed */
+}

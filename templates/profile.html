@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/profile.css">
+</head>
+<body>
+    <nav>
+        <h2>Image Cap</h2>
+        <ul>
+            <li><a href="/logout">Logout</a></li>
+            <li><p>{{ email }}</p></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <h1>Visual Semantic Extraction for Textual Description</h1>
+        <p>Choose an Image...</p>
+        <form action="/upload_image" method="post" enctype="multipart/form-data" class="upload-form">
+            <div id="choose-outer">
+                <div id="choose-inner">
+                    <img src="../static/upload-img.png" alt="upload img" width="200px">
+                    <div id="para">
+                        <p>Select any image</p>
+                        <p>Limit 2000 MB per file. JPG, PNG, JPEG</p>
+                    </div>
+                </div>
+                <div class="file-input-container">
+                    <label for="file-upload" class="file-upload-label">Choose File</label>
+                    <input id="file-upload" type="file" class="file-upload-input" accept="image/*" name="image">
+                    <span id="file-name" class="file-name"></span>
+                </div>
+            </div>
+            <br>
+            <center><input type="submit" value="Generate Caption" id="upload"></center>
+        </form>
+    </div>
+
+    {% if image_path %}
+    <div id="show-img">
+        <center><h3>Uploaded Image:</h3></center>
+        <center><img src="{{ image_path }}" alt="Uploaded Image"></center>
+    </div>
+    {% endif %}
+
+    {% if image_caption %}
+    <div id="show-cap">
+        <center><h3>Generated Image Caption:</h3></center>
+        <center><p>{{ image_caption }}</p></center>
+    </div>
+    {% else %}
+    <center><p>No image uploaded yet.</p></center>
+    {% endif %}
+</body>
+</html>
